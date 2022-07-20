@@ -36,7 +36,7 @@ echo "subjectAltName=DNS:server_a,DNS:localhost,IP:10.10.10.10" >> extfile.cnf
 openssl x509 -req -sha256 -days 365 -in cert_request.csr -CA ca-public-cert.pem -CAkey ca-private-key.pem -out signed-cert.pem -extfile extfile.cnf -CAcreateserial
 ```
 ---
-### Package keys and certs.
+### Package keys and certs. (Package them whatever way your application supports! I use JKS here)
 
 7. Chain your CA and server certificates.
 ```
